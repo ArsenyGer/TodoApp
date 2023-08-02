@@ -1,0 +1,73 @@
+.block {
+    position: relative;
+    width: 400px;
+    // height: 400px;
+    background-color: white;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    padding-left: 30px;
+    padding-top: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+
+    .title {
+        margin-top: 5px;
+        font-weight: 700;
+        font-size: 29px;
+        color: #243b55;
+    }
+
+    .items{
+        width: 92%;
+        border: 1px solid red;
+        height: 300px;
+    }
+
+    .input {
+        width: 92%;
+        background-color: rgb(223, 223, 223);
+        border-radius: 18px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .trueInput {
+            margin-left: 10px;
+            background-color: transparent;
+            border: none;
+            font-weight: 400;
+            font-size: 14px;
+            color: rgb(5, 5, 5);
+            width: 70%;
+
+            &:active {
+                outline: 0;
+                outline-offset: 0;
+            }
+
+            &:focus {
+                outline: 0;
+                outline-offset: 0;
+            }
+        }
+
+        .subButton {
+            height: 40px;
+            width: 80px;
+            border-radius: 18px;
+            background: linear-gradient(90deg, rgba(20, 30, 48, 1) 0%, rgba(36, 59, 85, 1) 100%);
+            font-weight: 700;
+            font-size: 14px;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                cursor: pointer;
+                color: rgb(233, 233, 233);
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.listItem {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 92%;
+
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .isDoneIndicator {
+        width: 20px;
+        height: 20px;
+        border-radius: 18px;
+        border: 1px solid gray;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_done {
+            border: 1px solid #243b55;
+            background-color: #243b55;
+            width: 20px;
+            height: 20px;
+            border-radius: 18px;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                border: 1px solid #243b55;
+                cursor: pointer;
+            }
+
+            transition: all ease-in 100ms;
+        }
+
+        &:hover {
+            border: 1px solid #243b55;
+            cursor: pointer;
+        }
+
+        transition: all ease-in 100ms;
+    }
+
+    .itemMessage {
+        margin-left: 13px;
+       
+        font-weight: 400;
+        font-size: 16px;
+        color: rgb(5, 5, 5);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+
+        &_done {
+            margin-left: 13px;
+        
+            font-weight: 400;
+            font-size: 16px;
+            color: rgb(5, 5, 5);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            text-decoration: line-through;
+
+           cursor: pointer;
+        }
+        cursor: pointer;
+        
+    }
+
+    .deleteItemButton {
+        font-weight: 400;
+        font-size: 18px;
+        color: rgb(5, 5, 5);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all ease-in 100ms;
+
+        &:hover {
+            
+            color: #243b55;
+            cursor: pointer;
+        }
+    }
+}
