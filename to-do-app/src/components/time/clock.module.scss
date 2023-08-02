@@ -1,0 +1,17 @@
+.clockBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.clock {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 29px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    // border: 1px solid red;
+
+}

@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import styles from './mainblock.module.scss'
 import ListItem from './listItem/ListItem'
+import Clock from './time/Clock'
 
 
 interface ItoDo {
@@ -59,15 +60,23 @@ const MainBlock = () => {
       isDone: false,
 
     }
-    const arr = toDoItems
-    const arr2 = [obj]
-    const arr3 = arr.concat(arr2)
-    setInputValue('')
-    setToDoItems(arr3)
 
-    let audio = new Audio(); // Создаём новый элемент Audio
-    audio.src = 'main.mp3'
-    audio.play()
+    if (inputValue.length == 0) {
+      let audioErr = new Audio(); // Создаём новый элемент Audio
+      audioErr.src = 'error.mp3'
+      audioErr.play()
+    } else {
+      const arr = toDoItems
+      const arr2 = [obj]
+      const arr3 = arr.concat(arr2)
+      setInputValue('')
+      setToDoItems(arr3)
+
+      let audio = new Audio(); // Создаём новый элемент Audio
+      audio.src = 'main.mp3'
+      audio.play()
+    }
+
 
 
 
@@ -106,7 +115,9 @@ const MainBlock = () => {
         return <ListItem item={item} changeDone={changeDone} deleteTask={deleteTask} key={item.id} />
       })}
 
-
+      <div className={styles.info}>
+        <Clock />
+      </div>
     </div>
   )
 }
