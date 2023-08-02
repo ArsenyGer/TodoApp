@@ -50,7 +50,9 @@ const MainBlock = () => {
   }
 
   const addTask = () => {
-    const newid = toDoItems.length > 0 ? toDoItems.at(-1)?.id + 1 : 1
+    // const newid = toDoItems.length > 0 ? toDoItems && toDoItems.at(-1)?.id + 1   : 1
+    const newid = toDoItems.length > 0 ? toDoItems[toDoItems.length - 1].id + 1 : 1;
+
     const obj: ItoDo = {
       id: newid,
       message: inputValue,
@@ -101,7 +103,7 @@ const MainBlock = () => {
         })}
       </div> */}
       {toDoItems && toDoItems.map((item: ItoDo) => {
-        return <ListItem item={item} changeDone={changeDone} deleteTask={deleteTask} />
+        return <ListItem item={item} changeDone={changeDone} deleteTask={deleteTask} key={item.id} />
       })}
 
 
