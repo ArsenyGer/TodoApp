@@ -10,3 +10,9 @@ html {
   margin: 0, auto;
   font-family: 'Inter', sans-serif;
 }
+
+@supports (-webkit-overflow-scrolling: touch) {
+  input {
+    font-size: 16px;
+  }
+}
